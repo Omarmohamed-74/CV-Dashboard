@@ -1,0 +1,35 @@
+services:
+  
+  database:
+    image: postgres:16
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+
+  backend:
+    build: ./backend
+    env_file: 
+      - .env
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    depends_on:
+      - database
+
+#   frontend:
+#   proxy:
+#   redis:
+
+volumes:
+  postgres_data:
+  
+networks:
+  app-network:
+
+
+
