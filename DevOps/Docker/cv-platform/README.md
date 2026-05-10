@@ -33,7 +33,7 @@ The goal of this project is not only to build an application, but also to practi
 
 # Architecture
 
-![Architecture](docs/architecture.png)
+![Architecture](docs/'Untitled Diagram.drawio.png'.png)
 
 ---
 
